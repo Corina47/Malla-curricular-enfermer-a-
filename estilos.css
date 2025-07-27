@@ -1,1 +1,217 @@
+/* Variables CSS para colores */
+:root {
+    --color-primary: #6A057F; /* Morado principal */
+    --color-secondary: #8E44AD; /* Morado secundario */
+    --color-tertiary: #BDC3C7; /* Gris claro */
+    --color-background: #ECF0F1; /* Fondo muy claro */
+    --color-text-dark: #2C3E50; /* Gris oscuro para texto */
+    --color-text-light: #FDFEFE; /* Blanco para texto en fondos oscuros */
+    --color-approved: #27AE60; /* Verde para ramo aprobado */
+    --color-blocked: #E74C3C; /* Rojo para ramo bloqueado */
+    --color-hover: #9B59B6; /* Morado más claro para hover */
+}
 
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Contenedor principal de la malla */
+.malla-curricular {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los semestres se envuelvan en pantallas pequeñas */
+    justify-content: center;
+    gap: 25px; /* Espacio entre las columnas de semestres */
+    padding: 30px 20px;
+    max-width: 1400px;
+    margin: 20px auto; /* Centrar el contenedor principal */
+}
+
+/* Estilos para cada semestre */
+.semestre {
+    flex: 1 1 280px; /* Flex-grow, flex-shrink, flex-basis. Ajusta el ancho base para que se vean bien en varias columnas */
+    background-color: var(--color-text-light);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    min-width: 280px; /* Ancho mínimo para columnas en pantallas pequeñas */
+    max-width: 350px; /* Ancho máximo para columnas en pantallas grandes */
+    transition: transform 0.2s ease-in-out;
+}
+
+.semestre:hover {
+    transform: translateY(-5px);
+}
+
+.semestre h2 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--color-tertiary);
+    padding-bottom: 10px;
+}
+
+.ramos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espacio entre cada ramo */
+}
+
+/* Estilos para cada ramo */
+.ramo {
+    background-color: var(--color-tertiary);
+    color: var(--color-text-dark);
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ramo:hover {
+    background-color: var(--color-hover);
+    color: var(--color-text-light);
+}
+
+/* Estilo para ramo aprobado */
+.ramo.aprobado {
+    background-color: var(--color-approved);
+    color: var(--color-text-light);
+    text-decoration: line-through;
+    cursor: default;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para ramo bloqueado (solo visual, el bloqueo es por JS) */
+.ramo.bloqueado {
+    background-color: var(--color-blocked);
+    color: var(--color-text-light);
+    cursor: not-allowed; /* Cambia el cursor para indicar que no es clickeable */
+    opacity: 0.7; /* Ligeramente transparente para indicar bloqueo */
+}
+
+/* Mensaje de requisitos (oculto por defecto) */
+#mensaje-requisitos {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: none; /* Oculto por defecto */
+    animation: fadeIn 0.3s ease-out;
+}
+
+#mensaje-requisitos button {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+#mensaje-requisitos button:hover {
+    background-color: var(--color-hover);
+}
+
+/* Animación para el mensaje de requisitos */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+@keyframes fadeOut {
+    from { opacity: 1; transform: translate(-50%, -50%); }
+    to { opacity: 0; transform: translate(-50%, -60%); }
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .malla-curricular {
+        gap: 20px;
+        padding: 25px 15px;
+    }
+    .semestre {
+        flex: 1 1 300px; /* Ajusta el tamaño base para 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 900px) {
+    .malla-curricular {
+        flex-direction: column; /* Apila los semestres en pantallas pequeñas */
+        align-items: center;
+        padding: 20px 10px;
+    }
+    .semestre {
+        width: 90%; /* Ancho completo o casi completo en móviles */
+        max-width: 500px; /* Limitar el ancho para que no se vea demasiado estirado */
+        margin-bottom: 25px; /* Espacio entre semestres apilados */
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .semestre {
+        padding: 20px;
+        min-width: unset;
+    }
+    .semestre h2 {
+        font-size: 1.6em;
+    }
+    .ramo {
+        padding: 12px 15px;
+        font-size: 0.95em;
+    }
+    #mensaje-requisitos {
+        padding: 20px 25px;
+        font-size: 1em;
+    }
+}
