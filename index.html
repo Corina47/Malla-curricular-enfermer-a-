@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular de Enfermería</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Malla Curricular de Enfermería</h1>
+        <p>Haz clic en un ramo para marcarlo como aprobado. ¡Recuerda cumplir los requisitos!</p>
+    </header>
 
+    <main class="malla-curricular">
+        <section class="semestre" data-semestre="1">
+            <h2>Semestre 1</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="habilidades-linguisticas">Habilidades lingüísticas</div>
+                <div class="ramo" data-id="socioantropologia">Socioantropología</div>
+                <div class="ramo" data-id="morfologia-i">Morfología I</div>
+                <div class="ramo" data-id="practica-morfologia-i">Práctica de laboratorio de Morfología l</div>
+                <div class="ramo" data-id="bioquimica">Bioquímica</div>
+                <div class="ramo" data-id="practica-bioquimica">Práctica de laboratorio de Bioquímica</div>
+                <div class="ramo" data-id="informacion-salud">Información en salud</div>
+                <div class="ramo" data-id="fundamento-enfermeria">Fundamento de enfermería</div>
+            </div>
+        </section>
+
+        <section class="semestre" data-semestre="2">
+            <h2>Semestre 2</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="metodologia-investigacion" data-requisitos="habilidades-linguisticas">Metodología de la investigación</div>
+                <div class="ramo" data-id="etica">Ética</div>
+                <div class="ramo" data-id="semiologia" data-requisitos="morfologia-i">Semiología</div>
+                <div class="ramo" data-id="practica-semiologia">Práctica de laboratorio de semiología</div>
+                <div class="ramo" data-id="bioestadistica" data-requisitos="informacion-salud">Bioestadística</div>
+                <div class="ramo" data-id="nutricion" data-requisitos="bioquimica">Nutrición</div>
+                <div class="ramo" data-id="enfermeria-basica-seguridad" data-requisitos="fundamento-enfermeria">Enfermería básica y seguridad del paciente</div>
+                <div class="ramo" data-id="practica-enfermeria-basica-seguridad">Práctica de laboratorio de enfermería básica y seguridad del paciente</div>
+            </div>
+        </section>
+
+        <section class="semestre" data-semestre="3">
+            <h2>Semestre 3</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="desarrollo-sostenible">Desarrollo sostenible</div>
+                <div class="ramo" data-id="microbiologia-parasitologia" data-requisitos="socioantropologia">Microbiología y parasitología</div>
+                <div class="ramo" data-id="practica-microbiologia-parasitologia">Práctica de laboratorio de microbiología y parasitología</div>
+                <div class="ramo" data-id="fisiopatologia" data-requisitos="semiologia">Fisiopatología</div>
+                <div class="ramo" data-id="enfermeria-clinica-i" data-requisitos="semiologia,enfermeria-basica-seguridad">Enfermería clínica I</div>
+                <div class="ramo" data-id="practica-enfermeria-clinica-i">Práctica de laboratorio de enfermería clínica I</div>
+                <div class="ramo" data-id="epidemiologia">Epidemiología</div>
+                <div class="ramo" data-id="farmacologia-i" data-requisitos="enfermeria-basica-seguridad">Farmacología I</div>
+                <div class="ramo" data-id="practica-farmacologia-i">Práctica de laboratorio de Farmacología I</div>
+            </div>
+        </section>
+
+        <section class="semestre" data-semestre="4">
+            <h2>Semestre 4</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="realidad-nacional-politica">Realidad nacional y política en el mundo actual</div>
+                <div class="ramo" data-id="bioetica" data-requisitos="etica">Bioética</div>
+                <div class="ramo" data-id="servicio-comunitario">Servicio comunitario 96h</div>
+                <div class="ramo" data-id="enfermeria-comunitaria" data-requisitos="enfermeria-clinica-i">Enfermería comunitaria</div>
+                <div class="ramo" data-id="practica-enfermeria-comunitaria">Práctica de laboratorio de Enfermería comunitaria</div>
+                <div class="ramo" data-id="enfermeria-clinica-ii" data-requisitos="enfermeria-clinica-i">Enfermería clínica II</div>
+                <div class="ramo" data-id="practica-enfermeria-clinica-ii">Práctica de laboratorio de Enfermería clínica ll</div>
+                <div class="ramo" data-id="psicologia-desarrollo">Psicología del desarrollo</div>
+                <div class="ramo" data-id="farmacologia-ii" data-requisitos="farmacologia-i">Farmacología ll</div>
+                <div class="ramo" data-id="practica-farmacologia-ii">Práctica de laboratorio de Farmacología ll</div>
+            </div>
+        </section>
+
+        <section class="semestre" data-semestre="5">
+            <h2>Semestre 5</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="emprendimiento" data-requisitos="realidad-nacional-politica">Emprendimiento</div>
+                <div class="ramo" data-id="decisiones-datos-ia" data-requisitos="realidad-nacional-politica">Decisiones basadas en datos E I.A.</div>
+                <div class="ramo" data-id="enfermeria-gineco-obstetrica-i" data-requisitos="enfermeria-clinica-ii">Enfermería gineco-obstétrica I</div>
+                <div class="ramo" data-id="practica-enfermeria-gineco-obstetrica-i">Práctica de laboratorio de enfermería gineco-obstétrica I</div>
+                <div class="ramo" data-id="enfermeria-geriatrica-i" data-requisitos="enfermeria-clinica-ii">Enfermería geriátrica I</div>
+                <div class="ramo" data-id="practica-enfermeria-geriatrica-i">Práctica de laboratorio de Enfermería geriátrica I</div>
+                <div class="ramo" data-id="enfermeria-salud-mental-psiquiatria" data-requisitos="enfermeria-clinica-ii,psicologia-desarrollo">Enfermería en salud mental y psiquiatría</div>
+                <div class="ramo" data-id="practica-enfermeria-salud-mental-psiquiatria">Práctica de laboratorio de Enfermería en salud mental y psiquiatría</div>
+                <div class="ramo" data-id="dietoterapia" data-requisitos="nutricion">Dietoterapia</div>
+            </div>
+        </section>
+
+        <section class="semestre" data-semestre="6">
+            <h2>Semestre 6</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="enfermeria-pediatrica-i" data-requisitos="enfermeria-gineco-obstetrica-i">Enfermería pediátrica I</div>
+                <div class="ramo" data-id="practica-enfermeria-pediatrica-i">Práctica de laboratorio de Enfermería pediátrica I</div>
+                <div class="ramo" data-id="enfermeria-cuidados-criticos-i" data-requisitos="enfermeria-gineco-obstetrica-i">Enfermería de cuidados críticos I</div>
+                <div class="ramo" data-id="practica-enfermeria-cuidados-criticos-i">Práctica de laboratorio de Enfermería de cuidados críticos I</div>
+                <div class="ramo" data-id="enfermeria-gineco-obstetrica-ii" data-requisitos="enfermeria-gineco-obstetrica-i">Enfermería gineco-obstétrica II</div>
+                <div class="ramo" data-id="practica-enfermeria-gineco-obstetrica-ii">Práctica de laboratorio de Enfermería gineco-obstétrica II</div>
+                <div class="ramo" data-id="enfermeria-geriatrica-ii" data-requisitos="enfermeria-geriatrica-i">Enfermería geriátrica II</div>
+                <div class="ramo" data-id="practica-enfermeria-geriatrica-ii">Práctica de laboratorio de Enfermería geriátrica II</div>
+                <div class="ramo" data-id="enfermeria-urgencias-desastres" data-requisitos="enfermeria-salud-mental-psiquiatria">Enfermería de urgencias y desastres</div>
+                <div class="ramo" data-id="practica-enfermeria-urgencias-desastres">Práctica de laboratorio de enfermería de urgencias y desastres</div>
+                <div class="ramo" data-id="educacion-salud">Educación para la salud</div>
+            </div>
+        </section>
+
+        <section class="semestre" data-semestre="7">
+            <h2>Semestre 7</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="enfermeria-pediatrica-ii" data-requisitos="enfermeria-pediatrica-i">Enfermería pediátrica II</div>
+                <div class="ramo" data-id="practica-laboratorio-enfermeria-pediatrica-ii">Práctica desastres laboratorio de Enfermería pediátrica II</div>
+                <div class="ramo" data-id="enfermeria-cuidados-criticos-ii" data-requisitos="enfermeria-cuidados-criticos-i">Enfermería de cuidados críticos II</div>
+                <div class="ramo" data-id="practica-laboratorio-enfermeria-cuidados-criticos-ii">Práctica de laboratorio de Enfermería de cuidados críticos II</div>
+                <div class="ramo" data-id="enfermeria-quirurgica" data-requisitos="enfermeria-gineco-obstetrica-ii">Enfermería quirúrgica</div>
+                <div class="ramo" data-id="practica-laboratorio-enfermeria-quirurgica">Práctica de laboratorio de Enfermería quirúrgica</div>
+                <div class="ramo" data-id="administracion-servicios-enfermeria" data-requisitos="educacion-salud">Administración de servicios de enfermería</div>
+                <div class="ramo" data-id="salud-ocupacional" data-requisitos="educacion-salud">Salud ocupacional</div>
+                <div class="ramo" data-id="proyecto-integrador-enfermero" data-requisitos="enfermeria-pediatrica-i,enfermeria-cuidados-criticos-i,enfermeria-gineco-obstetrica-ii,enfermeria-geriatrica-ii,enfermeria-urgencias-desastres,educacion-salud">Proyecto integrador enfermero</div>
+            </div>
+        </section>
+
+        <section class="semestre" data-semestre="8">
+            <h2>Semestre 8</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="internado-i-quirurgica">Internado I- Clínica quirúrgica</div>
+                <div class="ramo" data-id="internado-ii-ginecobstetricia">Internado II- Ginecobstetricia</div>
+            </div>
+        </section>
+
+        <section class="semestre" data-semestre="9">
+            <h2>Semestre 9</h2>
+            <div class="ramos">
+                <div class="ramo" data-id="internado-iii-pediatria">Internado III- Pediatría</div>
+                <div class="ramo" data-id="internado-iv-administracion">Internado IV- Administración de servicios enfermeros</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
